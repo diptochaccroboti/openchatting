@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to the top */
+    background-image: url(21.jpg);
+    
+    /* Adjusting the background image */
+    background-size: cover; /* Makes the background image cover the entire area */
+    background-position: center top; /* Positions the image at the top center */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Makes the background image fixed when scrolling */
+}
+
+
+.container {
+    background: rgba(255, 255, 255, 0.562);
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Take full height */
+    margin-top: 12%;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 15px;
+    margin-left: 200px;
+}
+
+textarea, input[type="text"], input[type="password"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #741212;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-left: 41px;
+    background-color: rgba(255, 255, 255, 0.637);
+}
+
+button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#logoutButton {
+    align-self: flex-end; /* Align logout button to the right */
+    position: sticky; /* Make logout button sticky */
+    top: 0; /* Stick it to the top */
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+#postsContainer {
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    overflow-y: auto; /* Make posts scrollable */
+    flex-grow: 1; /* Allow this area to grow */
+}
+
+.post {
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.post .author {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+}
+/* Add to the existing styles.css file */
+
+#adminPostInput, #removeUsername {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#adminSavePostButton, #removeUserButton {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#adminSavePostButton:hover, #removeUserButton:hover {
+    background-color: #0056b3;
+}
+
+#adminPostsContainer {
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    overflow-y: auto;
+    max-height: 300px; /* Adjust as needed */
+}
+
+#removeUserSection {
+    margin-top: 20px;
+}
+#togglePassword {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9em;
+    color: #007BFF;
+    width: 6%;
+    
+    margin-bottom: 40px;
+    
+}

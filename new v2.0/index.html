@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        
+            background-image: url('https://i.ibb.co/JxMZkcg/21.jpg');
+            
+            /* Adjusting the background image */
+            background-size: cover; /* Makes the background image cover the entire area */
+            background-position: center top; /* Positions the image at the top center */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+            background-attachment: fixed; /* Makes the background image fixed when scrolling */
+        }
+        
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.685);
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+            padding-left: 13px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddddddcb;
+            border-radius: 40px;
+            margin-left: 58px;
+            margin-right: 20px;
+        }
+
+         input[type="password"]
+         {
+            width: 200%;
+    
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 40px;
+            margin-left: 58px;
+            
+         }
+
+
+        button {
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 40px;
+            cursor: pointer;
+            font-size: 19px;
+            width: 290px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .passwordContainer {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        #password {
+            flex-grow: 1;
+        }
+
+        #togglePassword {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9em;
+            color: #007BFF;
+            padding: 10px;
+            margin-left: 10px;
+        }
+
+        #error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <input type="text" id="username" placeholder="Username" required>
+
+        <!-- Password field with toggle visibility option -->
+        <div class="passwordContainer">
+            <input type="password" id="password" placeholder="4-digit Password" maxlength="4" required>
+            <button type="button" id="togglePassword">Show</button>
+        </div>
+
+        <button id="loginButton">Login</button>
+        <p id="error" class="error"></p>
+    </div>
+    <a href="admin_login.html">ADmin</a>
+    <script src="login.js"></script>
+</body>
+</html>

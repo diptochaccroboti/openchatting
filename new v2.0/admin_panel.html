@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            background-image: url('https://i.ibb.co/JxMZkcg/21.jpg');
+            background-size: cover;
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        
+        .container {
+            background-color: rgba(255, 255, 255, 0.76);
+            width: 80%;
+            padding: 20px;
+            border-radius: 18px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            margin-top: 4%;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 15px;
+            margin-left: 440px;
+        }
+
+        textarea, input[type="text"], input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 75%;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #adminLogoutButton {
+            margin-left: 96%;
+            margin-top: 0.5%;
+            border-radius: 53%;
+        }
+
+        #postsContainer {
+            margin-top: 20px;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+            overflow-y: auto;
+            flex-grow: 1;
+        }
+
+        .post {
+            background: #f9f9f9;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            margin-right: 50%;
+        }
+
+        .post .author {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+
+        #adminPostInput, #removeUsername {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 75%;
+        }
+
+        #adminSavePostButton:hover, #removeUserButton:hover {
+            background-color: #0056b3;
+        }
+
+        #adminPostsContainer {
+            margin-top: 20px;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+            overflow-y: auto;
+            max-height: 300px;
+        }
+
+        #removeUserSection {
+            margin-top: 20px;
+        }
+
+        #togglePassword {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9em;
+            color: #007BFF;
+            width: 6%;
+            margin-bottom: 40px;
+        }
+
+        /* New CSS for aligning textarea and button */
+        #postInputSection {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        #postInputSection textarea {
+            flex-grow: 1;
+            margin-right: 10px;
+        }
+
+        #removeUserSection {
+            display: flex;
+            align-items: center;
+        }
+
+        #removeUserSection input {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="adminLogoutButton">
+            <img src="https://i.ibb.co/1Qc5j7g/1.png" alt="Logout" style="width: 20px; height: 20px;">
+        </button>
+        
+        <h1>Admin Panel</h1>
+        
+        <h2>User Statistics</h2>
+        <div id="userStats">Loading...</div>
+        <h2>Posts Management</h2>
+        
+        <div id="postsManagement">
+            <div id="postInputSection">
+                <textarea id="adminPostInput" placeholder="Write a new paragraph..."></textarea>
+                <button id="adminSavePostButton">Save Post</button>
+            </div>
+            <div id="adminPostsContainer"></div>
+        </div>
+        <h2>Remove Users</h2>
+        <div id="removeUserSection">
+            <input type="text" id="removeUsername" placeholder="Username to Remove">
+            <button id="removeUserButton">Remove User</button>
+        </div>
+    </div>
+
+    <script src="admin_panel.js"></script>
+</body>
+</html>
